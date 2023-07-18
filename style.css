@@ -42,11 +42,21 @@ span {
 .navlist a:hover {
     color: var(--text-color);
     text-shadow: 0 0 10px rgb(18, 247, 255, 0.6),
-    0 0 20px rgb(18, 247, 255, 0.3),
-    0 0 20px rgb(18, 247, 255, 0.3),
-    0 0 40px rgb(18, 247, 255, 0.3),
-    0 0 70px rgb(18, 247, 255, 0.3),
-    0 0 80px rgb(18, 247, 255, 0.3),
-    0 0 100px rgb(18, 247, 255, 0.3),
-    0 0 150px rgb(18, 247, 255, 0.3);;
+    0 0 20px rgb(18, 247, 255, 0.6),
+    0 0 20px rgb(18, 247, 255, 0.6),
+    0 0 40px rgb(18, 247, 255, 0.6),
+    0 0 70px rgb(18, 247, 255, 0.6),
+    0 0 80px rgb(18, 247, 255, 0.6),
+    0 0 100px rgb(18, 247, 255, 0.6),
+    0 0 150px rgb(18, 247, 255, 0.6);;
+}
+#menu-icon{
+    font-size: 1.8rem;
+    z-index: 10001;
+    cursor: pointer;
+    margin-left: 25px;
+    background: var(--hover-color);
+    border-radius: 3px;
+    color: var(--secon-bg-color);
+    display: none;
 }
