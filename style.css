@@ -15,11 +15,27 @@
 }
 body{
     font-family: "poppins", sans-serif;
+    background: #250821;
 }
 header {
     text-align: center;
-    justify-content: center;
+    justify-content: space-between;
     display: flex;
     width: 100%;
-
+}
+.logo {
+    font-size: 26px;
+    font-weight: 700px;
+    letter-spacing: 1px;
+}
+span {
+    color: var(--hover-color);
+}
+.navlist{
+    display: flex;
+}
+.navlist a {
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 10px 20px;
 }
