@@ -76,5 +76,6 @@ section {
     max-width: 600px;
 }
 .home-content h1{
-    font-size: ;
+    font-size: var(--bg-font);
+    font-weight: 700;
 }
