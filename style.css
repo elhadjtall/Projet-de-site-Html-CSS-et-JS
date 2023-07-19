@@ -72,3 +72,9 @@ section {
     align-items: center;
     grid-gap: 4rem;
 }
+.home-content {
+    max-width: 600px;
+}
+.home-content h1{
+    font-size: ;
+}
