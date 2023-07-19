@@ -64,7 +64,7 @@ section {
     padding: 100px 10%;
 }
 .home {
-    min-height: 100%;
+    min-height: 100vh;
     height: 100%;
     width: 100%;
     display: grid;
@@ -78,4 +78,18 @@ section {
 .home-content h1{
     font-size: var(--bg-font);
     font-weight: 700;
+}
+.change-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+.change-text h3{
+    display: inline-flex;
+    margin: 0;
+    vertical-align: top;
+}
+.change-text h3 .word{
+    position: absolute;
+    display: flex;
+    opacity: 0;
 }
