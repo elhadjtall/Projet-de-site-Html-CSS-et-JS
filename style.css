@@ -48,6 +48,7 @@ body{
     margin-left: 4rem;
     transition: .3s;
 }
-.navbar a:hover {
-    color: var(--text-color);
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-color);
 }
