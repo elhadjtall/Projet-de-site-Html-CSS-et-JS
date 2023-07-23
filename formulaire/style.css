@@ -95,6 +95,23 @@ body {
     background: #1f293a;
     padding: 0 6px;
 }
+.forgot {
+    margin-top: 6px;
+}
+.forgot.show {
+    margin: 10px 0 70px;
+    display: flex;
+    justify-content: space-between;
+}
+.forgot.show label {
+    font-size: 14.5px;
+    color: #fff;
+}
+.forgot.show label input {
+    accent-color: #0ef;
+    cursor: pointer;
+    margin-right: 3px;
+}
 .forgot a {
     font-size: 14.5px;
     color:  #0ef;
