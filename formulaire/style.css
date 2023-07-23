@@ -28,13 +28,20 @@ body {
     position: relative;
     width: 100%;
 }
-.page-box .page.password-page {
-    position: absolute;
-    transform: translateX(500px);
-}
 .login-box .page-box {
     display: flex;
-    box-direction: colums;
+    flex-direction: column;
+}
+.page-box .page {
+    width: 100%;
+}
+.page-box .page.email-page {
+    transform: translateX(-500px);
+}
+.page-box .page.password-page {
+    position: absolute;
+    transform: translateX(0px);
+    margin-top: 140px;
 }
 .page-box .login-title {
     text-align: center;
