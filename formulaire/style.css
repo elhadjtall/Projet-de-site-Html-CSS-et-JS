@@ -38,6 +38,10 @@ body {
 .page-box .page.email-page {
     transform: translateX(0);
 }
+
+.page-box.active-pass .page.email-page {
+    transform: translateX(-500px);
+}
 .page-box .page.password-page {
     position: absolute;
     transform: translateX(500px);
