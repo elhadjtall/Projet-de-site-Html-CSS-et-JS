@@ -37,6 +37,7 @@ body {
 }
 .page-box .page.email-page {
     transform: translateX(0);
+    transition: .25s ease-in-out;
 }
 
 .page-box.active-pass .page.email-page {
@@ -46,6 +47,10 @@ body {
     position: absolute;
     transform: translateX(500px);
     margin-top: 140px;
+    transition: .25s ease-in-out;
+}
+.page-box.active-pass .page.password-page {
+    transform: translateX(0);
 }
 .page-box .login-title {
     text-align: center;
