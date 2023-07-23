@@ -36,11 +36,11 @@ body {
     width: 100%;
 }
 .page-box .page.email-page {
-    transform: translateX(-500px);
+    transform: translateX(0);
 }
 .page-box .page.password-page {
     position: absolute;
-    transform: translateX(0px);
+    transform: translateX(500px);
     margin-top: 140px;
 }
 .page-box .login-title {
@@ -159,4 +159,8 @@ body {
     font-size: 16px;
     color: #1f293a;
     font-weight: 600;
+}
+.btn-box button:nth-child(1) {
+    background: transparent;
+    color: #0ef;
 }
