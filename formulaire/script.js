@@ -23,6 +23,7 @@ btnBack.onclick = (e) => {
     pageBox.classList.remove('active-pass');
     loginTitle.innerHTML = 'Connexion';
     userEmail.innerHTML = 'Please login to use the platform';
+    emailInput.focus();
 };
 
 // Ce code permet de checker le mot de passe dans le champs input en precisant de quel type

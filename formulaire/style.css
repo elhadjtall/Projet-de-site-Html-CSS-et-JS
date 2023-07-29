@@ -22,6 +22,7 @@ body {
     align-items: center;
     border-radius: 8px;
     padding: 0 45px;
+    overflow: hidden;
 }
 
 .container .login-box {
