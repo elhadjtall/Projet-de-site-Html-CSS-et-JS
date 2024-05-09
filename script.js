@@ -59,7 +59,7 @@ ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 // typed js ============================== */
 
 const typed = new Typed('.multiple-text', {
-    strings: ['Developpeur Web Junior', 'Web Design', 'Consultant fonctionel'],
+    strings: ['Developpeur Web Junior', 'Web Design', 'Consultant fonctionnel Odoo'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
