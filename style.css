@@ -31,7 +31,7 @@ section {
 .header {
     position: fixed;
     top: 0;
-    left: O;
+    left: 0;  /* Correction ici */
     width: 100%;
     padding: 2rem 9%;
     background: var(--bg-color);
@@ -49,7 +49,7 @@ section {
     font-weight: 600;
     cursor: default;
 }
-.navbar  a{
+.navbar a {
     font-size: 1.7rem;
     color: var(--text-color);
     margin-left: 4rem;
@@ -73,15 +73,15 @@ section {
     width: 30vw;
     animation: floatImage 4s ease-in-out infinite;
 }
-@keyframes floatImage{
-    0%{
+@keyframes floatImage {
+    0% {
         transform: translateY(0);
     }
     50% {
         transform: translateY(-2.4rem);
     }
     100% {
-        transform: translateY();
+        transform: translateY(0);
     }
 }
 .home-content h3 {
@@ -96,7 +96,7 @@ section {
     font-weight: 700;
     line-height: 1.3;
 }
-.home-content p{
+.home-content p {
     font-size: 1.6rem;
 }
 .social-media a {
@@ -111,7 +111,6 @@ section {
     font-size: 2rem;
     color: var(--main-color);
     margin: 3rem 1.5rem 3rem 0;
-
 }
 .social-media a:hover {
     background: var(--main-color);
@@ -191,7 +190,7 @@ span {
 .services-box h3 {
     font-size: 2.6rem;
 }
-.services-box p{
+.services-box p {
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
 }
@@ -218,7 +217,7 @@ span {
     width: 100%;
     transition: .5s ease;
 }
-.portfolio-box:hover img{
+.portfolio-box:hover img {
     transform: scale(1.1);
 } 
 .portfolio-box .portfolio-layer {
@@ -242,7 +241,7 @@ span {
 .portfolio-layer h4 {
     font-size: 3rem;
 }
-.portfolio-layer p{
+.portfolio-layer p {
     font-size: 1rem;
     margin: .3rem 0 1rem;
 }
@@ -314,7 +313,7 @@ span {
     transition: .5s ease;
 }
 .footer-iconTop a:hover {
-    box-shadow: 0 0 1rem var(--main-color);
+    box-shadow: 0 0 1rem var (--main-color);
 }
 .footer-iconTop a i {
     font-size: 2.4rem;
@@ -395,44 +394,34 @@ span {
     .services h2 {
         margin-bottom: 3rem;
     }
-    .services h2 {
-        margin-bottom: 3rem;
-    }
-    .portfolio h2 {
-        margin-bottom: 3rem;
-    }
-
     .portfolio-container {
         grid-template-columns: repeat(2, 1fr);
     }
 }
-@media (max-width:617px) {
+@media (max-width: 617px) {
     .portfolio-container {
         grid-template-columns: 1fr;
     }
 }
-@media (max-width:450px) {
+@media (max-width: 450px) {
     html {
         font-size: 50%;
     }
     .contact form .input-box input {
         width: 100%;
     }
-
 }
-@media (max-width:365px) {
+@media (max-width: 365px) {
     .home-img {
         width: 90vw;
     }
     .about-img img {
         width: 90vw;
     }
-
     .footer {
         flex-direction: column-reverse;
     }
 }
-
 .footer p {
     text-align: center;
     margin-top: 2rem;
