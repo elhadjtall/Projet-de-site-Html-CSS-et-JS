@@ -59,7 +59,7 @@ ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 // typed js ============================== */
 
 const typed = new Typed('.multiple-text', {
-    strings: ['Developpeur Web Junior', 'Consultant fonctionnel', 'Gestion de projets'],
+    strings: ['Developpeur Web Junior', 'Web Design', 'Consultant fonctionnel', 'Gestion de projets'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
