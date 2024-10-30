@@ -6,6 +6,10 @@
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>elhadj-tall</title>
+
+    <!-- Swiper css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+    <!-- Swiper css fin -->
 </head>
 <body>
     <header class="header">
@@ -232,25 +236,35 @@
             </div>
         </div>
         
-    </section>
+    </section> <br>
     <!-- Debut du slider -->
-    <!-- <div class="container">
-        <h2 class="heading">Mes <span>Projets</span></h2>
-        <p>Vous pouvez aussi voir mes projets et mes réalisations en cliquant sur l'image</p>
-        <div id="slider">
-            <div class="slide">
-                <img src="images/1.jpg" alt="">
-            </div>
-            <div class="slide">
-                <img src="images/2.jpg" alt="">
-            </div>
-            <div class="slide">
-                <img src="images/3.jpg" alt="">
+    <div class="slide-container swiper">
+        <div class="slide-content">
+            <div class="card-wrapper swiper-wrapper">
+                <div class="card swiper-slide">
+                    <div class="image-content">
+                        <span class="overlay"></span>
+                        <div class="card-image">
+                            <img src="images/1.jpg" alt="" class="card-img">
+                        </div>
+                    </div>
+
+                    <div class="card-content">
+                        <h2 class="name">Projet 1</h2>
+                        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Atque eveniet nemo qui explicabo id recusandae 
+                            aspernatur magni magnam. Necessitatibus!</p>
+
+                        <button class="button">Lire plus</button>
+                    </div>
+                </div>
             </div>
         </div>
-        <button id="prev"><i class='bx bx-chevron-left'></i></button>
-        <button id="next"><i class='bx bx-chevron-right'></i></button>
-    </div> -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+
+    </div>
      <!-- Fin du slider -->
 
     <!-- contact section design -->
@@ -287,6 +301,8 @@
     <!-- Type js -->
     <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 
+    <!-- swiper js -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <!-- custon js -->
     <script src="script.js"></script>
 </body>
