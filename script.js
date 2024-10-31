@@ -68,8 +68,11 @@ const typed = new Typed('.multiple-text', {
 
 var swiper = new Swiper(".slide-content", {
     slidesPerView: 1,
-    spaceBetween: 30,
+    spaceBetween: 25,
     loop: true,
+    centerSlide: 'true',
+    fade: 'true',
+    grabCursor: 'true',
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
