@@ -516,8 +516,23 @@ span {
 @media (max-width: 617px) {
     .portfolio-container {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 2rem;
+    }
+    .services-container .services-box,
+    .contact form .input-box input,
+    .contact form textarea {
+        width: 100%;
+    }
+    .home-content h1 {
+        font-size: 3.5rem;
+    }
+    .btn {
+        font-size: 1.4rem;
+        padding: 0.8rem 2.2rem;
     }
 }
+
 @media (max-width: 450px) {
     html {
         font-size: 50%;
@@ -525,7 +540,12 @@ span {
     .contact form .input-box input {
         width: 100%;
     }
+    .footer p {
+        text-align: center;
+        margin-top: 2rem;
+    }
 }
+
 @media (max-width: 365px) {
     .home-img {
         width: 90vw;
@@ -537,11 +557,6 @@ span {
         flex-direction: column-reverse;
     }
 }
-.footer p {
-    text-align: center;
-    margin-top: 2rem;
-}
-
 /* skill design competence */
 @media (max-width: 1200px) {
     .skill .name {
