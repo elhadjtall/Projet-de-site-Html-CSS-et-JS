@@ -67,7 +67,7 @@ const typed = new Typed('.multiple-text', {
 });
 
 var swiper = new Swiper(".slide-content", {
-    slidesPerView: 1,
+    slidesPerView: 2,
     spaceBetween: 25,
     loop: true,
     centerSlide: 'true',

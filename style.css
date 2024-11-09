@@ -160,6 +160,7 @@ span {
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
 }
+/* debut mise en page des services */
 .services h2 {
     margin-bottom: 5rem;
 }
@@ -194,71 +195,47 @@ span {
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
 }
-.portfolio {
+/* fin mise en page des services */
+/* skill design competence */
+.skill-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
     background: var(--second-bg-color);
+    height: 70vh;
 }
-.portfolio h2 {
-    margin-bottom: 4rem;
-}
-.portfolio-container {
+.skill .name {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    gap: 2.5rem;
-}
-.portfolio-container .portfolio-box {
-    position: relative;
-    border-radius: 2rem;
-    box-shadow: 0 0 1rem var(--bg-color);
-    overflow: hidden;
-    display: flex;
-}
-.portfolio-box img {
-    width: 100%;
-    transition: .5s ease;
-}
-.portfolio-box:hover img {
-    transform: scale(1.1);
-} 
-.portfolio-box .portfolio-layer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, .1), var(--main-color));
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 0 4rem;
-    transform: translateY(100%);
-}
-.portfolio-box:hover .portfolio-layer {
-    transform: translateY(0);
-}
-.portfolio-layer h4 {
-    font-size: 3rem;
-}
-.portfolio-layer p {
-    font-size: 1rem;
-    margin: .3rem 0 1rem;
-}
-.portfolio-layer a {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 4rem;
-    height: 4rem;
-    background: var(--text-color);
-    border-radius: 50%;
-}
-.portfolio-layer a i {
-    font-size: 2rem;
-    color: var(--second-bg-color);
+    grid-template-columns: repeat(4, 1fr); /* 3 colonnes */
+    gap: 20px; /* espace entre les éléments */
+    justify-content: center; /* centre horizontalement les colonnes */
+    align-items: center; /* centre verticalement les éléments */
+    color: var(--text-color);
+    font-size: 2.2rem;
+    font-weight: 500;
+    margin: 15px 0;
+    padding: 20px; /* ajoute de l’espace autour des compétences */
 }
 
+.skill .name span {
+    background-color: var(--bg-color);
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 40px;
+    border: 5px solid var(--main-color);
+    box-shadow: 9.91px 9.91px 15px rgba(0, 0, 0, 0.25), -9.91px -9.91px 15px var(--bg-color);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.skill .name span:hover {
+    box-shadow: 9.91px 9.91px 15px rgba(0, 0, 0, 0.25), 
+                9.91px 9.91px 15px var(--main-color);
+}
+/* fin skill design competence */
+
+/* debut mise en page du contact */
 .contact h2 {
     margin-bottom: 3rem;
 }
@@ -293,6 +270,9 @@ span {
     margin-top: 2rem;
     cursor: pointer;
 }
+/* fin mise en page du contact */
+
+/* debut mise en page du footer */
 .footer {
     display: flex;
     justify-content: space-between;
@@ -320,6 +300,8 @@ span {
     font-size: 2.4rem;
     color: var(--second-bg-color);
 }
+/* fin mise en page du footer */
+
 /* debut mise en page du slider */
 .slide-container {
     max-width: 1120px;
@@ -404,6 +386,10 @@ span {
     cursor: pointer;
     transition: all 0.3s ease;
 }
+.button a {
+    text-decoration: none;
+    color: #fff;
+}
 .button:hover {
     background: var(--second-bg-color);
 }
@@ -433,6 +419,7 @@ span {
 }
 
 /* fin mise en page du slider  */
+
 /* BREAKPOINTS */
 
 @media (max-width: 1200px) {
@@ -440,24 +427,35 @@ span {
         font-size: 55%;
     }
 }
+
+@media (max-width: 768px) {
+    html {
+        font-size: 50%; /* encore plus petit pour les tablettes */
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 45%; /* pour les téléphones, encore plus compact */
+    }
+}
 @media (max-width: 991px) {
     .header {
-        padding: 2rem 3%;
+        padding: 2rem 5%; /* Légère augmentation pour plus de marge */
     }
     section {
-        padding: 10rem 3% 2rem;
+        padding: 8rem 5% 2rem; /* Réduction de la hauteur pour optimiser l’espace */
     }
-    .services {
-        padding-bottom: 7rem;
-    }
-    .portfolio {
-        padding-bottom: 7rem;
+    .services, .portfolio {
+        padding-bottom: 5rem; /* Uniformisation du padding */
     }
     .contact {
         min-height: auto;
+        padding: 5% 5%; /* Ajout d'un padding pour éviter les bords trop rapprochés */
     }
     .footer {
-        padding: 2rem 3%;
+        padding: 2rem 5%;
+        text-align: center; /* Centrer le texte pour les petits écrans */
     }
 }
 @media (max-width: 768px) {
@@ -469,10 +467,10 @@ span {
         top: 100%;
         left: 0;
         width: 100%;
-        padding: 1rem 3%;
+        padding: 1rem 5%; /* Légère augmentation de padding pour alignement */
         background: var(--bg-color);
-        border-top: .1rem solid rgba(0, 0, 0, .2);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        border-top: 0.1rem solid rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
         display: none;
     }
     .navbar.active {
@@ -480,35 +478,39 @@ span {
     }
     .navbar a {
         display: block;
-        font-size: 2rem;
-        margin: 3rem 0;
+        font-size: 1.8rem; /* Légère réduction pour améliorer la lisibilité */
+        margin: 2rem 0;
     }
 
     .home {
         flex-direction: column;
+        text-align: center;
     }
     .home-content h3 {
-        font-size: 2.6rem;
+        font-size: 2.4rem;
     }
     .home-content h1 {
-        font-size: 5rem;
+        font-size: 4rem;
     }
     .home-content img {
-        width: 70vw;
-        margin-top: 4rem;
+        width: 80vw;
+        margin-top: 3rem;
     }
     .about {
         flex-direction: column-reverse;
+        text-align: center;
     }
     .about img {
-        width: 70vw;
-        margin-top: 4rem;
+        width: 80vw;
+        margin-top: 3rem;
     }
     .services h2 {
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
+        font-size: 3rem;
     }
     .portfolio-container {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr; /* Passer à une colonne pour optimiser l'espace */
+        gap: 2rem;
     }
 }
 @media (max-width: 617px) {
@@ -538,4 +540,24 @@ span {
 .footer p {
     text-align: center;
     margin-top: 2rem;
+}
+
+/* skill design competence */
+@media (max-width: 1200px) {
+    .skill .name {
+        grid-template-columns: repeat(3, 1fr); /* 3 colonnes pour écrans moyens */
+    }
+}
+
+@media (max-width: 768px) {
+    .skill .name {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes pour les tablettes */
+    }
+}
+
+@media (max-width: 450px) {
+    .skill .name {
+        grid-template-columns: 1fr; /* 1 colonne pour les petits écrans */
+        gap: 10px; /* espace réduit entre les éléments */
+    }
 }
