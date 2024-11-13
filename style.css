@@ -71,7 +71,12 @@ section {
 }
 .home-img img{
     width: 30vw;
+    height: 30vW;
     animation: floatImage 4s ease-in-out infinite;
+    border-radius: 50%;
+    border: var(--main-color) 5px solid;
+    margin: 2px;
+
 }
 @keyframes floatImage {
     0% {
@@ -146,10 +151,15 @@ span {
 }
 .about-img img {
     font-size: 25vw;
+    width: 35vw;
+    height: 35vw;
+    border-radius: 50%;
+    border: var(--main-color) 5px solid;
 }
 .heading {
     text-align: center;
     font-size: 3.8rem;
+    font-style: italic;
 }
 .about-content h2 {
     text-align: center;
@@ -163,7 +173,7 @@ span {
 .about-content p {
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
-    text-align: justify;
+    text-align: center;
 }
 /* debut mise en page des services */
 .services h2 {

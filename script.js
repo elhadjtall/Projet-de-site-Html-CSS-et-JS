@@ -66,6 +66,7 @@ const typed = new Typed('.multiple-text', {
     loop: true
 });
 
+// Le code js du slider
 var swiper = new Swiper(".slide-content", {
     slidesPerView: 2,
     spaceBetween: 25,
