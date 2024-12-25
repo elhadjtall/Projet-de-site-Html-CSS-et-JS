@@ -218,8 +218,10 @@ span {
     align-items: center;
     gap: 2rem;
     background: var(--second-bg-color);
-    height: 70vh;
+    height: 80vh;
     border-radius: 20px;
+    padding: 10px 10px 10px 10px;
+    margin: 10px 10px 10px 10px;
 }
 .skill .name {
     display: grid;
@@ -321,6 +323,7 @@ span {
 /* debut mise en page du slider */
 .slide-container {
     max-width: 1120px;
+    margin: 0 auto;
     width: 100%;
 }
 .slide-content {
@@ -439,17 +442,20 @@ span {
 
 /* BREAKPOINTS */
 
-@media (max-width: 1200px) {
+/* Pour les tablettes */
+/* Pour les réduire un peu */
+
+@media (max-width: 991px) {
     html {
         font-size: 55%;
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 617px) {
     html {
         font-size: 50%; /* encore plus petit pour les tablettes */
     }
-}
+} 
 
 @media (max-width: 450px) {
     html {
@@ -465,6 +471,9 @@ span {
     }
     .services, .portfolio {
         padding-bottom: 5rem; /* Uniformisation du padding */
+    }
+    .projects {
+        padding-bottom: 3rem; /* Uniformisation du padding */
     }
     .contact {
         min-height: auto;
@@ -530,7 +539,7 @@ span {
         gap: 2rem;
     }
 }
-@media (max-width: 617px) {
+@media (max-width: 480px) {
     .portfolio-container {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -575,7 +584,7 @@ span {
     }
 }
 /* skill design competence */
-@media (max-width: 1200px) {
+@media (max-width: 991px) {
     .skill .name {
         grid-template-columns: repeat(3, 1fr); /* 3 colonnes pour écrans moyens */
     }
