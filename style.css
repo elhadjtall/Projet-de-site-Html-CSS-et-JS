@@ -76,7 +76,8 @@ section {
     border-radius: 50%;
     border: var(--main-color) 5px solid;
     margin: 2px;
-
+    max-width: 100%;
+    height: auto;
 }
 @keyframes floatImage {
     0% {
@@ -155,6 +156,8 @@ span {
     height: 35vw;
     border-radius: 50%;
     border: var(--main-color) 5px solid;
+    max-width: 100%;
+    height: auto;
 }
 .heading {
     text-align: center;
@@ -218,22 +221,31 @@ span {
     align-items: center;
     gap: 2rem;
     background: var(--second-bg-color);
-    height: 80vh;
+    min-height: 80vh;
     border-radius: 20px;
-    padding: 10px 10px 10px 10px;
-    margin: 10px 10px 10px 10px;
+    padding: 10px;
+    margin: 10px;
+    overflow-x: hidden;
+    width: 100%;
 }
+
+.skill {
+    width: 100%;
+    padding: 0 10px;
+}
+
 .skill .name {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 3 colonnes */
-    gap: 20px; /* espace entre les éléments */
-    justify-content: center; /* centre horizontalement les colonnes */
-    align-items: center; /* centre verticalement les éléments */
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
     color: var(--text-color);
     font-size: 2.2rem;
     font-weight: 500;
     margin: 15px 0;
-    padding: 20px; /* ajoute de l’espace autour des compétences */
+    padding: 20px;
+    width: 100%;
 }
 
 .skill .name span {
@@ -312,7 +324,7 @@ span {
     transition: .5s ease;
 }
 .footer-iconTop a:hover {
-    box-shadow: 0 0 1rem var (--main-color);
+    box-shadow: 0 0 1rem var(--main-color);
 }
 .footer-iconTop a i {
     font-size: 2.4rem;
@@ -383,6 +395,8 @@ span {
     object-fit: cover;
     border-radius: 2%;
     border: 2px solid #0ef;
+    max-width: 100%;
+    height: auto;
 }
 .name {
     font-size: 30px;
@@ -467,7 +481,7 @@ span {
         padding: 2rem 5%; /* Légère augmentation pour plus de marge */
     }
     section {
-        padding: 8rem 5% 2rem; /* Réduction de la hauteur pour optimiser l’espace */
+        padding: 8rem 5% 2rem; /* Réduction de la hauteur pour optimiser l'espace */
     }
     .services, .portfolio {
         padding-bottom: 5rem; /* Uniformisation du padding */
@@ -538,8 +552,92 @@ span {
         grid-template-columns: 1fr; /* Passer à une colonne pour optimiser l'espace */
         gap: 2rem;
     }
+    .skill-container {
+        margin-bottom: 2rem;
+    }
+    .skill {
+        padding: 0 5px;
+    }
+    .skill .name {
+        justify-items: center;
+        gap: 12px;
+        padding: 10px;
+    }
+    .skill .name span {
+        font-size: 1.5rem;
+        padding: 8px 14px;
+        width: 100%;
+        text-align: center;
+    }
 }
 @media (max-width: 480px) {
+    .about-content h2,
+    .about-content p,
+    .about-content,
+    .about,
+    .heading,
+    .services-box h3,
+    .services-box p,
+    .contact form,
+    .footer p {
+        word-break: break-word;
+        overflow-wrap: break-word;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    .about-content h2 {
+        font-size: 1.5rem;
+    }
+    .about-content p {
+        font-size: 1.1rem;
+    }
+    .heading {
+        font-size: 2rem;
+    }
+    .services-container {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 0 2vw;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    .services-container .services-box {
+        padding: 1.5rem 1rem 2rem;
+        font-size: 1.3rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .services-box h3 {
+        font-size: 1.5rem;
+    }
+    .services-box p {
+        font-size: 1.1rem;
+    }
+    .contact form {
+        margin: 1rem auto;
+        padding: 0 2vw;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .skill-container {
+        margin-bottom: 2.5rem;
+        padding: 5px;
+        min-height: unset;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+    .skill {
+        padding: 0;
+    }
+    .skill .name {
+        gap: 4px;
+        padding: 2px;
+    }
+    .skill .name span {
+        font-size: 1.1rem;
+        padding: 4px 8px;
+        width: 100%;
+    }
     .portfolio-container {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -550,12 +648,41 @@ span {
     .contact form textarea {
         width: 100%;
     }
+    .contact form .input-box input,
+    .contact form textarea {
+        margin-bottom: 1.2rem;
+    }
     .home-content h1 {
         font-size: 3.5rem;
     }
     .btn {
         font-size: 1.4rem;
         padding: 0.8rem 2.2rem;
+    }
+    .about {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 1.5rem 2vw;
+        margin: 0 auto;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .about-img img {
+        width: 95vw;
+        max-width: 100%;
+        margin: 0 auto 1.5rem auto;
+        display: block;
+    }
+    .about-content {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 1.5rem;
+    }
+    .home-img img {
+        margin-top: 2rem;
+    }
+    .home-content .btn {
+        margin-bottom: 1.5rem;
     }
 }
 

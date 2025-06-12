@@ -22,7 +22,6 @@ window.onscroll = () => {
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
 
-
         if (top >= offset && top < offset + height) {
             navLinks.forEach(links => {
                 links.classList.remove('active');
@@ -32,14 +31,16 @@ window.onscroll = () => {
     });
 
     let header = document.querySelector('header');
-
     header.classList.toggle('sticky', window.scrollY > 100);
-
-
-    /*=============================== remove toggle icon and navbar when click navbar link (scroll) ========== */
-    menuIcon.classList.remove('bx-x');
-    navbar.classList.remove('active');
 }
+
+// Fermer le menu hamburger quand on clique sur un lien du menu
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        menuIcon.classList.remove('bx-x');
+        navbar.classList.remove('active');
+    });
+});
 
 // scrol reveal
 
@@ -51,7 +52,7 @@ ScrollReveal({
 });
 
 ScrollReveal().reveal('.home-content, .heading', { origin: 'top' });
-ScrollReveal().reveal('.home-content, .heading, .portofolio-box, .contact form', { origin: 'bottom' });
+ScrollReveal().reveal('.home-content, .heading, .portfolio, .contact form', { origin: 'bottom' });
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
@@ -71,9 +72,7 @@ var swiper = new Swiper(".slide-content", {
     slidesPerView: 2,
     spaceBetween: 25,
     loop: true,
-    centerSlide: 'true',
-    fade: 'true',
-    grabCursor: 'true',
+    grabCursor: true,
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -82,4 +81,12 @@ var swiper = new Swiper(".slide-content", {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
+    breakpoints: {
+      0: {
+        slidesPerView: 1,
+      },
+      769: {
+        slidesPerView: 2,
+      }
+    }
   });
